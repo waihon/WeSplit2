@@ -10,16 +10,22 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         Form {
-            Text("Line 1")
-            Text("Line 2")
-            Text("Line 3")
-            Text("Line 4")
-            Text("Line 5")
-            Text("Line 6")
-            Text("Line 7")
-            Text("Line 8")
-            Text("Line 9")
-            Text("Line 10")
+            Group {
+                Text("Line 1")
+                Text("Line 2")
+                Text("Line 3")
+                Text("Line 4")
+                Text("Line 5")
+                Text("Line 6")
+            }
+            Group {
+                Text("Line 7")
+                Text("Line 8")
+                Text("Line 9")
+                Text("Line 10")
+                Text("Line 11")
+                Text("Line 12")
+            }
         }
     }
 }
