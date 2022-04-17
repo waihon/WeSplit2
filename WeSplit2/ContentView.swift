@@ -39,8 +39,8 @@ struct ContentView: View {
                     Text("Your name is \(name)")
                 }
                 Section {
-                    ForEach(0..<100) { number in
-                        Text("Row \(number)")
+                    ForEach(0..<100) {
+                        Text("Row \($0)")
                     }
                 }
             }
