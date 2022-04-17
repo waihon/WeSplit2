@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         Form {
-            Group {
+            Section {
                 Text("Line 1")
                 Text("Line 2")
                 Text("Line 3")
@@ -18,7 +18,7 @@ struct ContentView: View {
                 Text("Line 5")
                 Text("Line 6")
             }
-            Group {
+            Section {
                 Text("Line 7")
                 Text("Line 8")
                 Text("Line 9")
