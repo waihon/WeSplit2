@@ -38,6 +38,11 @@ struct ContentView: View {
                     TextField("Enter your name", text: $name)
                     Text("Your name is \(name)")
                 }
+                Section {
+                    ForEach(0..<100) { number in
+                        Text("Row \(number)")
+                    }
+                }
             }
             .navigationTitle("SwiftUI")
             .navigationBarTitleDisplayMode(.inline)
