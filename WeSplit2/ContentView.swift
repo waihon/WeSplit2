@@ -8,6 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    var body: some View {
+        Text("Hello, world!")
+            .padding()
+    }
+}
+
+struct OverviewContentView: View {
     @State private var tapCount = 0
     @State private var name = ""
     let students = ["Harry", "Hermione", "Ron"]
