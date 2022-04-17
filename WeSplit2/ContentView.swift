@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var tapCount = 0
+    @State private var name = ""
     
     var body: some View {
         NavigationView {
@@ -27,12 +28,15 @@ struct ContentView: View {
                     Text("Line 9")
                     Text("Line 10")
                     Text("Line 11")
-                    Text("Line 12")
                 }
                 Section {
                     Button("Tap Count: \(tapCount)") {
                         tapCount += 1
                     }
+                }
+                Section {
+                    TextField("Enter your name", text: $name)
+                    Text("Your name is \(name)")
                 }
             }
             .navigationTitle("SwiftUI")
