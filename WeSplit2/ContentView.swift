@@ -27,6 +27,10 @@ struct ContentView: View {
         
         return amountPerPerson
     }
+    
+    var totalCheckAmount: Double {
+        checkAmount + totalPerPerson
+    }
 
     var body: some View {
         NavigationView {
@@ -58,6 +62,12 @@ struct ContentView: View {
                     Text(totalPerPerson, format: .currency(code: Locale.current.currencyCode ?? "USD"))
                 } header: {
                     Text("Amount per person")
+                }
+                
+                Section {
+                    Text(totalCheckAmount, format: .currency(code: Locale.current.currencyCode ?? "USD"))
+                } header: {
+                    Text("Total check amount")
                 }
             }
             .navigationTitle("WeSplit")
