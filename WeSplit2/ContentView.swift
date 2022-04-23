@@ -31,12 +31,16 @@ struct ContentView: View {
     var totalCheckAmount: Double {
         checkAmount + totalPerPerson
     }
+    
+    var currencyFormatter: FloatingPointFormatStyle<Double>.Currency {
+        .currency(code: Locale.current.currencyCode ?? "USD")
+    }
 
     var body: some View {
         NavigationView {
             Form {
                 Section {
-                    TextField("Amount", value: $checkAmount, format: .currency(code: Locale.current.currencyCode ?? "USD"))
+                    TextField("Amount", value: $checkAmount, format: currencyFormatter)
                         .keyboardType(.decimalPad)
                         .focused($amountIsFocused)
 
@@ -58,13 +62,13 @@ struct ContentView: View {
                 }
                 
                 Section {
-                    Text(totalPerPerson, format: .currency(code: Locale.current.currencyCode ?? "USD"))
+                    Text(totalPerPerson, format: currencyFormatter)
                 } header: {
                     Text("Amount per person")
                 }
                 
                 Section {
-                    Text(totalCheckAmount, format: .currency(code: Locale.current.currencyCode ?? "USD"))
+                    Text(totalCheckAmount, format: currencyFormatter)
                 } header: {
                     Text("Total check amount")
                 }
